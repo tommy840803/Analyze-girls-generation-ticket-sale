@@ -13,7 +13,7 @@ Programming language and Packages :
 
 1. Python
   
-2. pandas、numpy、matplotlib、datetime
+2. pandas、numpy、matplotlib、seaborn、datetime
   
 
 ## Define the "System loading " = △ amount of people addition  / △ hr 
@@ -42,10 +42,16 @@ Feature Combination :
 ![image](./img/result.PNG)
 
 
+## Part of the description
 
-# '*.py'
 ``` python
+# loading data
+df = pd.read_csv("girlgenerationutf8-1.csv")
+
+# use the CREATE_DATE column
 dr = df["CREATE_DATE"]
+
+# process CREATE_DATE : 12hr => 24hr
 for index in range(len(dr)):
     t = dr.loc[index].split(" ")
     if(t[1]=="p.m."):               
