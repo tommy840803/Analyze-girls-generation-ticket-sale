@@ -7,7 +7,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+from datetime import datetime, timedelta
 import seaborn as sns
 get_ipython().magic(u'matplotlib inline')
 
@@ -21,7 +21,7 @@ df = pd.read_csv("girlgenerationutf8-1.csv")
 # In[7]:
 
 
-from datetime import datetime, timedelta
+
 
 # 時間處理 12小時轉格式為24小時
 dr = df["CREATE_DATE"]
