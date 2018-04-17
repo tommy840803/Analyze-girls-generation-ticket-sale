@@ -40,5 +40,5 @@ Feature Combination :
 3. Compute the existing buy request that each kind of different date
 
 
-![image](./img/result.PNG)
+![image](./img/result.PNG){:height="700px" width="400px"}
 
