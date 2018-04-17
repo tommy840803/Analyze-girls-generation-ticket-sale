@@ -13,8 +13,7 @@ Programming language and Packages :
 
 1. Python
   
-2. pandas、numpy、matplotlib
-  
+2. pandas、numpy、matplotlib、datetime
   
 
 ## Define the "System loading " = △ amount of people addition  / △ hr 
@@ -41,4 +40,22 @@ Feature Combination :
 
 
 ![image](./img/result.PNG)
+
+
+
+# '*.py'
+``` python
+dr = df["CREATE_DATE"]
+for index in range(len(dr)):
+    t = dr.loc[index].split(" ")
+    if(t[1]=="p.m."):               
+        time = t[0] + " " + t[2] #去掉am pm，依照 年月日 時分秒 合併      
+        dtime = datetime.strptime(time, '%Y/%m/%d %H:%M:%S.') + timedelta(hours=12)  #如果為pm 新增12小時
+        dr.loc[index] = dtime
+        #print(dtime)       
+    else:
+        time = t[0] + " " + t[2]
+        dr.loc[index] = datetime.strptime(time, '%Y/%m/%d %H:%M:%S.')
+```
+
 
